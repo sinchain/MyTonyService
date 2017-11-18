@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+<!--This is View  use cmd / -->
+    <!--orange view-->
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:layout_margin="10dp"
+        android:text="Sinchai"
+        android:textSize="@dimen/h1"
+        android:background="#f4c81a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+
+        android:background="#f4301a"
+        android:layout_width="@dimen/icon"
+        android:layout_height="@dimen/icon"/>
+
+    <!--Image-->
+    <ImageView
+        android:src="@drawable/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--Butoon go to second-->
+    <Button
+        android:id="@+id/btnGoToSecond"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="Go to Second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
