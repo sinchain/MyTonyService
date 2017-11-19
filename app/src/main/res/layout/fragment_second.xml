@@ -16,4 +16,69 @@
         android:layout_height="wrap_content" />
 
     <!--Content-->
+    <LinearLayout
+        android:padding="16dp"
+        android:layout_marginRight="@dimen/mymargin"
+        android:layout_marginLeft="@dimen/mymargin"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Date-->
+       <TextView
+           android:textColor="@color/colorPrimaryDark"
+           android:textStyle="bold"
+           android:textSize="@dimen/h3"
+           android:text="Date : "
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+
+        <!--Exchange Rate-->
+        <TextView
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="@dimen/h3"
+            android:text="Rate : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--Text Field USD-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Edit test-->
+            <EditText
+                android:inputType="number"
+                android:hint="USD"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <!--Button-->
+            <Button
+                android:layout_gravity="center_vertical"
+                android:textSize="10sp"
+                android:text="Exchange"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <!--Show Answer-->
+        <TextView
+            android:layout_marginTop="@dimen/mymargin"
+            android:textColor="#1042e7"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="@dimen/h2"
+            android:text="THB : "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
 </LinearLayout>
