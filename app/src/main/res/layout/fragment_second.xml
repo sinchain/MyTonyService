@@ -26,19 +26,21 @@
 
         <!--Date-->
        <TextView
+           android:id="@+id/txtShowDate"
            android:textColor="@color/colorPrimaryDark"
            android:textStyle="bold"
            android:textSize="@dimen/h3"
-           android:text="Date : "
+           android:text="@string/date"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content" />
 
         <!--Exchange Rate-->
         <TextView
+            android:id="@+id/txtShowRate"
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold"
             android:textSize="@dimen/h3"
-            android:text="Rate : "
+            android:text="@string/rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -51,6 +53,7 @@
             <!--Edit test-->
             <EditText
                 android:inputType="number"
+                android:id="@+id/editUSD"
                 android:hint="USD"
                 android:layout_weight="2"
                 android:layout_width="0dp"
@@ -58,6 +61,7 @@
 
             <!--Button-->
             <Button
+                android:id="@+id/btnExchange"
                 android:layout_gravity="center_vertical"
                 android:textSize="10sp"
                 android:text="Exchange"
@@ -71,11 +75,12 @@
         <!--Show Answer-->
         <TextView
             android:layout_marginTop="@dimen/mymargin"
+            android:id="@+id/txtAnswer"
             android:textColor="#1042e7"
             android:layout_gravity="center_horizontal"
             android:textStyle="bold"
             android:textSize="@dimen/h2"
-            android:text="THB : "
+            android:text="@string/answer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

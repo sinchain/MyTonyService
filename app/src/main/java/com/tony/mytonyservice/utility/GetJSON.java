@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
 
 /**
  * Created by Tony on 19/11/17.
@@ -26,11 +27,15 @@ public class GetJSON extends AsyncTask<String, Void, String> {
             OkHttpClient okHttpClient = new OkHttpClient();
             Request.Builder builder = new Request.Builder();
             Request request = builder.url(strings[0]).build();
+            Response response = okHttpClient.newCall(request).execute();
+            return response.body().string();
+
 
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
 
-        return null;
+
     }
 } // End Main Class

@@ -2,5 +2,11 @@
     <string name="app_name">My Tony Service</string>
 
     <string name="title_thai"> แลกเปลี่ยนเงินตรา</string>
+    <string name="date">Date :</string>
+    <string name="rate">Rate :</string>
+    <string name="usd">USD</string>
+    <string name="exchange">Exchange</string>
+    <string name="thb">THB :</string>
+    <string name="answer">Answer :</string>
 
 </resources>
