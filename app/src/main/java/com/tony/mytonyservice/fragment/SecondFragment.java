@@ -7,7 +7,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tony.mytonyservice.R;
 import com.tony.mytonyservice.utility.GetJSON;
@@ -37,6 +40,51 @@ public class SecondFragment extends Fragment {
 //        Show Date
         showDate();
 
+//        Show Rate
+
+        showRate();
+
+//        Exchange
+        Button button = getView().findViewById(R.id.btnExchange);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText editText = getView().findViewById(R.id.editUSD);
+                usdString = editText.getText().toString().trim();
+                if (usdString.isEmpty()) {
+//                    Have Space
+                    Toast.makeText(getActivity(), "Please fill USD", Toast.LENGTH_SHORT).show();
+
+                } else {
+//                    No Space
+                    double usdDouble = Double.parseDouble(usdString);
+                    double answerDouble = usdDouble * rateDouble;
+                    TextView textView = getView().findViewById(R.id.txtAnswer);
+                    textView.setText(Double.toString(answerDouble));
+
+                }
+
+
+            }
+        });
+
+    }
+
+    private void showRate() {
+        TextView textView = getView().findViewById(R.id.txtShowRate);
+
+        try {
+
+            JSONArray jsonArray = new JSONArray( jsonRateString );
+            JSONObject jsonObject = jsonArray.getJSONObject(0);
+            rateDouble = jsonObject.getDouble("THB");
+            Log.d("19nov17", "rateDouble ==> " + rateDouble);
+
+            textView.setText(getText(R.string.rate) + Double.toString(rateDouble));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
